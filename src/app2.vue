@@ -1,5 +1,6 @@
 <template>
   <div>
+    <app-button>HASEEB</app-button>
   {{ user.username }}-{{ fullName }}<br>
   <strong>Followers:</strong> {{ followers }}<br>
   <button @click="incrementFollower">
@@ -50,11 +51,10 @@
       </li>
     </ul>   
   </section>
-      <AppButton>SAK</AppButton> 
+  
 </template>
 
 <script>
-import AppButton from './components/AppButton.vue';
 export default {
   name: 'App',
   data() {
@@ -79,7 +79,9 @@ export default {
     }; 
   },
   components: {
-    AppButton
+    'app-button':{
+      template: `<p>asdasd</p>`,
+    }
   },
   watch: {
     followers(newValfollowers, oldValfollowers) {
